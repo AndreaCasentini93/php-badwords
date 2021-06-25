@@ -7,6 +7,7 @@
     */
 
     $text = 'PHP è un linguaggio di scripting interpretato, originariamente concepito per la programmazione di pagine web dinamiche.';
+    $censored_text = str_replace($_GET["parola"], '***', $text);
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +21,22 @@
     </head>
 
     <body>
-        <p>
+        <h2>Paragrafo Originale</h2>
+        <h4>
             <?php echo $text; ?>
+        </h4>
+        <p>
+            Il paragrafo è costituito da <?php echo strlen($text); ?> caratteri.
+        </p>
+
+        <br>
+
+        <h2>Paragrafo Censurato</h2>
+        <h4>
+            <?php echo $censored_text; ?>
+        </h4>
+        <p>
+            Il paragrafo è costituito da <?php echo strlen($censored_text); ?> caratteri.
         </p>
     </body>
 </html>
