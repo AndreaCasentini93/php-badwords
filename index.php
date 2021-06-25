@@ -25,12 +25,12 @@
     <body>
         <div class="wrapper">
             <h1>Inserisci in Querystring la chiave "<span><?php echo $string; ?></span>" e come valore la parola che vuoi censurare</h1>
-            <h4>
-                <?php echo $censored_text; ?>
-            </h4>
             <p>
-                Il paragrafo è costituito da <span><?php echo strlen($censored_text); ?></span> caratteri.
+                <?php echo $censored_text; ?>
             </p>
+            <h2>
+                Il paragrafo è costituito da <span><?php echo strlen($censored_text); ?></span> caratteri.
+            </h2>
         </div>
     </body>
 </html>
